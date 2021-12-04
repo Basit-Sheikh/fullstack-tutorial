@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 
 sys.path += ['../../']
 
@@ -29,6 +30,7 @@ class HomePageView:
         load_more_button = driver.find_element_by_xpath(HomePageView.LOAD_MORE_BUTTON)
         driver.execute_script("arguments[0].scrollIntoView();", load_more_button)
         load_more_button.click()
+        time.sleep(2)
 
     def cancel_trips_from_home(self, driver, num_items, start_page=HOME_PAGE_NAME):
         """ Cancels booked trips from home page """

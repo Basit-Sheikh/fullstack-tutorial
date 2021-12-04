@@ -42,7 +42,6 @@ class ProductView:
         """ Removes items from cart """
         # Need to reload the page from the cart view to avoid crashing during booking
         helper.navigate_to_cart(driver)
-        driver.refresh()
 
         helper.navigate_to_cart(driver)
         self.current_page = cart_view.CartView.CART_PAGE_NAME
